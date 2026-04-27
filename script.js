@@ -112,6 +112,28 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// 3.1 Mobile Menu Toggle
+const mobileMenu = document.getElementById('mobile-menu');
+const navLinks = document.querySelector('.nav-links');
+
+if (mobileMenu) {
+    mobileMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('is-active');
+        navLinks.classList.toggle('active');
+        // Prevent body scroll when menu is open
+        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : 'initial';
+    });
+}
+
+// Close menu when clicking a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (mobileMenu) mobileMenu.classList.remove('is-active');
+        if (navLinks) navLinks.classList.remove('active');
+        document.body.style.overflow = 'initial';
+    });
+});
+
 // 4. Multi-Carousel Logic (Drag/Scroll)
 const tracks = document.querySelectorAll('.carousel-track');
 
