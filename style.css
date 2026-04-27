@@ -72,6 +72,27 @@ h1, h2, h3, h4, .serif {
     display: block;
 }
 
+.navbar-brand-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    color: var(--cyprus);
+    letter-spacing: 2px;
+    font-weight: 400;
+    margin-right: auto;
+    margin-left: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .navbar-brand-text {
+        margin-left: 0;
+        margin-right: 0;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.3rem;
+    }
+}
+
 .hero-new {
     padding-top: 70px; /* Offset for fixed navbar */
 }
@@ -178,7 +199,7 @@ h1, h2, h3, h4, .serif {
 
 .hero-main-title {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(40px, 5vw, 64px);
+    font-size: clamp(48px, 8vw, 88px);
     font-weight: 700;
     color: var(--cloud-white);
     line-height: 1.1;
@@ -401,7 +422,7 @@ h1, h2, h3, h4, .serif {
     }
 
     .hero-main-title {
-        font-size: 34px !important;
+        font-size: 48px !important;
         margin-bottom: 20px !important;
     }
 
