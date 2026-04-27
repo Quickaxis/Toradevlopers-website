@@ -1691,10 +1691,10 @@ footer {
     }
 }
 /* Owner Section (Akfa Style) */
-.owner-section.akfa-style {
-    background-color: #1B4D3E !important;
+#founder.owner-section.akfa-style {
+    background-color: #ffffff !important;
     padding: 120px 0;
-    color: white !important;
+    color: #1B4D3E !important;
     position: relative;
     z-index: 1;
 }
@@ -1817,7 +1817,7 @@ footer {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 100px;
     line-height: 0.9;
-    color: white;
+    color: #1B4D3E;
     margin-bottom: 10px;
 }
 
@@ -1830,7 +1830,8 @@ footer {
 
 .owner-location {
     font-size: 13px;
-    color: rgba(255, 255, 255, 0.9);
+    color: #1B4D3E;
+    opacity: 0.7;
     margin-bottom: 35px;
 }
 
@@ -1843,7 +1844,7 @@ footer {
     font-family: 'DM Sans', sans-serif;
     font-size: 16px;
     line-height: 1.8;
-    color: #ffffff;
+    color: #1B4D3E;
     margin-bottom: 40px;
     max-width: 650px;
 }
@@ -1853,14 +1854,15 @@ footer {
 }
 
 .owner-bio strong {
-    color: white;
+    color: #1B4D3E;
+    font-weight: 700;
 }
 
 .owner-quote-box {
     font-family: 'Playfair Display', serif;
     font-size: 24px;
     font-style: italic;
-    color: white;
+    color: #1B4D3E;
     line-height: 1.6;
     margin-bottom: 45px;
     padding-left: 30px;
