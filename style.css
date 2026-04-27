@@ -416,16 +416,32 @@ h1, h2, h3, h4, .serif {
     }
 
     .hero-trust-stats {
-        flex-direction: column !important;
-        gap: 16px !important;
-        margin-bottom: 32px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 0 !important;
+        margin-bottom: 24px !important;
+        width: 100%;
+    }
+
+    .hero-stat {
+        flex: 1;
+        padding: 0 8px !important;
+        text-align: center;
+    }
+
+    .h-stat-val {
+        font-size: 24px !important;
+    }
+
+    .h-stat-lbl {
+        font-size: 9px !important;
+        white-space: nowrap;
     }
 
     .h-stat-div {
-        width: 40px !important;
-        height: 1px !important;
-        background: rgba(255, 255, 255, 0.1) !important;
-        margin: 0 auto;
+        display: none !important;
     }
 
     .hero-btns-row {
@@ -1052,9 +1068,7 @@ section {
 }
 
 .infrastructure .standard-card {
-    background: rgba(255,255,255,0.06) !important;
-    backdrop-filter: blur(8px) !important;
-    -webkit-backdrop-filter: blur(8px);
+    background: rgba(255,255,255,0.10) !important;
     border: 1px solid rgba(255,255,255,0.12) !important;
     border-radius: 16px !important;
     padding: 36px 32px !important;
@@ -1167,6 +1181,10 @@ section {
         padding: 0 !important;
         max-width: 100% !important;
         gap: 16px !important;
+    }
+
+    .infrastructure .standard-card {
+        padding: 20px 18px !important;
     }
     
     .infrastructure .infra-stats-strip {
@@ -1495,15 +1513,14 @@ footer {
 .testimonial-card {
     width: 360px;
     flex-shrink: 0;
-    background: white;
+    background: #ffffff;
     border-radius: 16px;
     padding: 32px 28px 28px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.25), 0 2px 8px rgba(0,0,0,0.15);
-    border: 1px solid rgba(200, 151, 43, 0.15);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+    border: 1px solid rgba(200, 151, 43, 0.2);
     position: relative;
     transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.4s;
     cursor: default;
-    perspective: 1000px;
 }
 
 .testimonial-card:hover {
@@ -1544,7 +1561,7 @@ footer {
 }
 
 .t-quote-as {
-    font-size: 18px;
+    font-size: 17px;
     color: #1B4D3E;
     font-weight: 600;
     line-height: 1.5;
@@ -1591,7 +1608,7 @@ footer {
 
 .t-name {
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 500;
     color: #111a16;
     margin-bottom: 2px;
     display: block;
@@ -1647,7 +1664,17 @@ footer {
 
 @media (max-width: 768px) {
     .testimonial-card {
-        width: 300px;
+        width: 280px !important;
+        padding: 24px 20px !important;
+    }
+    
+    .t-quote-as {
+        font-size: 15px !important;
+    }
+    
+    .t-quote-en {
+        font-size: 12px !important;
+    }
     }
     
     .t-headline {
