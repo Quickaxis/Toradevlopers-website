@@ -1877,9 +1877,9 @@ footer {
 }
 
 .o-pill {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #ffffff;
+    background: rgba(27, 77, 62, 0.05);
+    border: 1px solid rgba(27, 77, 62, 0.1);
+    color: #1B4D3E;
     font-size: 12px;
     padding: 8px 20px;
     border-radius: 50px;
@@ -1911,8 +1911,8 @@ footer {
 
 .btn-call-owner {
     background: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    color: white;
+    border: 2px solid #1B4D3E;
+    color: #1B4D3E;
     padding: 18px 40px;
     border-radius: 12px;
     font-weight: 700;
@@ -1921,8 +1921,8 @@ footer {
 }
 
 .btn-call-owner:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: white;
+    background: #1B4D3E;
+    color: white;
 }
 
 /* Mobile Responsiveness */
