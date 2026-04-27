@@ -1664,18 +1664,10 @@ footer {
 
 @media (max-width: 768px) {
     .testimonial-card {
-        width: 280px !important;
+        width: 300px !important;
         padding: 24px 20px !important;
     }
-    
-    .t-quote-as {
-        font-size: 15px !important;
-    }
-    
-    .t-quote-en {
-        font-size: 12px !important;
-    }
-    }
+}
     
     .t-headline {
         font-size: 30px;
@@ -1695,7 +1687,7 @@ footer {
     }
     
     .testimonial-watermark {
-        font-size: 100px;
+        font-size: 80px;
     }
 }
 /* Owner Section (Akfa Style) */
@@ -2185,15 +2177,21 @@ html, body {
     }
     
     .testimonial-card {
-        width: 100% !important;
+        width: calc(100vw - 40px) !important;
         min-width: unset !important;
         margin-bottom: 20px;
     }
+
+    .marquee-mask {
+        display: none;
+    }
     
-    .testimonials-track {
+    .marquee-track {
         flex-direction: column;
         gap: 20px;
         padding: 0 20px;
+        width: 100% !important;
+        animation: none !important;
     }
 
     /* Trust Strip Fix */
