@@ -2115,8 +2115,9 @@ footer {
     color: #1B4D3E;
 }
 
-.modal-opt.wa .opt-icon { color: #25D366; background: rgba(37, 211, 102, 0.1); }
-.modal-opt.urgent .opt-icon { color: #C8972B; background: rgba(200, 151, 43, 0.1); }
+.modal-opt.wa .opt-icon { color: #25D366; background: rgba(37, 211, 102, 0.15); }
+.modal-opt.call .opt-icon { color: #003E3E; background: rgba(0, 62, 62, 0.1); }
+.modal-opt.urgent .opt-icon { color: #C8972B; background: rgba(200, 151, 43, 0.15); }
 
 .opt-text {
     flex-grow: 1;
@@ -2303,4 +2304,40 @@ html, body {
         font-size: 18px;
     }
 }
+/* Floating Action Button */
+.floating-booking-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #C8972B, #D4AF37);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0 10px 30px rgba(200, 151, 43, 0.4);
+    z-index: 1000;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
 
+.floating-booking-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(200, 151, 43, 0.6);
+}
+
+.floating-booking-btn i {
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .floating-booking-btn {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 18px;
+        font-size: 12px;
+    }
+}
