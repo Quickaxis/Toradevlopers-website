@@ -2183,8 +2183,7 @@ html, body {
     }
 
     .marquee-mask {
-        display: block;
-        width: 60px;
+        display: none;
     }
     
     .marquee-track {
