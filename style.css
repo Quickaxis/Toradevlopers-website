@@ -66,15 +66,10 @@ h1, h2, h3, h4, .serif {
     text-decoration: none;
 }
 
-.logo-text {
-    font-family: Georgia, serif;
-    font-size: 20px;
-    font-weight: 700;
-    color: #1B4D3E;
-}
-
-.logo-text span {
-    color: #C8972B;
+.logo-img {
+    height: 40px;
+    width: auto;
+    display: block;
 }
 
 .hero-new {
@@ -1308,14 +1303,11 @@ footer {
     margin-bottom: 4rem;
 }
 
-.footer-logo-text {
-    font-family: Georgia, serif;
-    font-size: 18px;
-    color: white;
-    font-weight: 700;
+.footer-logo-img {
+    height: 30px;
+    width: auto;
     margin-bottom: 1.5rem;
     display: block;
-    letter-spacing: 1px;
 }
 
 .footer-links h4 {
