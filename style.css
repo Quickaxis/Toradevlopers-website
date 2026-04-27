@@ -1830,7 +1830,7 @@ footer {
 
 .owner-location {
     font-size: 13px;
-    color: rgba(255,255,255,0.6);
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: 35px;
 }
 
@@ -1843,7 +1843,7 @@ footer {
     font-family: 'DM Sans', sans-serif;
     font-size: 16px;
     line-height: 1.8;
-    color: rgba(255,255,255,0.8);
+    color: #ffffff;
     margin-bottom: 40px;
     max-width: 650px;
 }
@@ -1875,9 +1875,9 @@ footer {
 }
 
 .o-pill {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
     font-size: 12px;
     padding: 8px 20px;
     border-radius: 50px;
