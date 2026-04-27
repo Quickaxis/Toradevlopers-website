@@ -1700,9 +1700,9 @@ footer {
 }
 /* Owner Section (Akfa Style) */
 .owner-section.akfa-style {
-    background-color: #1B4D3E;
+    background-color: #1B4D3E !important;
     padding: 120px 0;
-    color: white;
+    color: white !important;
     position: relative;
     z-index: 1;
 }
