@@ -1040,7 +1040,7 @@ section {
     text-align: center;
 }
 
-.infrastructure .infra-grid-top {
+.infrastructure .infra-carousel-track {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 24px !important;
@@ -1049,13 +1049,26 @@ section {
     padding: 0 40px !important;
 }
 
-.infrastructure .infra-grid-bottom {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 24px !important;
-    max-width: 740px !important;
-    margin: 0 auto !important;
-    padding: 0 40px !important;
+.infrastructure .infra-carousel-track .standard-card:nth-child(4),
+.infrastructure .infra-carousel-track .standard-card:nth-child(5) {
+    grid-column: span 1;
+}
+
+@media (min-width: 993px) {
+    .infrastructure .infra-carousel-track {
+        grid-template-columns: repeat(6, 1fr) !important;
+    }
+    .infrastructure .infra-carousel-track .standard-card:nth-child(1),
+    .infrastructure .infra-carousel-track .standard-card:nth-child(2),
+    .infrastructure .infra-carousel-track .standard-card:nth-child(3) {
+        grid-column: span 2;
+    }
+    .infrastructure .infra-carousel-track .standard-card:nth-child(4) {
+        grid-column: 2 / span 2;
+    }
+    .infrastructure .infra-carousel-track .standard-card:nth-child(5) {
+        grid-column: 4 / span 2;
+    }
 }
 
 .infrastructure .infra-bottom-rule {
@@ -2235,6 +2248,32 @@ html, body {
     /* Modal padding */
     .modal-content {
         padding: 32px 20px;
+    }
+}
+
+    .infra-carousel-track {
+        display: flex !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        gap: 16px !important;
+        padding: 20px !important;
+        width: 100% !important;
+        scrollbar-width: none; /* Hide scrollbar for Firefox */
+    }
+    
+    .infra-carousel-track::-webkit-scrollbar {
+        display: none; /* Hide scrollbar for Chrome/Safari */
+    }
+    
+    .infrastructure .standard-card {
+        min-width: 280px !important;
+        flex-shrink: 0 !important;
+        scroll-snap-align: center !important;
+        padding: 24px 20px !important;
+    }
+    
+    .infrastructure .infra-title {
+        font-size: 32px !important;
     }
 }
 
