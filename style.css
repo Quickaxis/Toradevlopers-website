@@ -2177,21 +2177,31 @@ html, body {
     }
     
     .testimonial-card {
-        width: calc(100vw - 40px) !important;
-        min-width: unset !important;
-        margin-bottom: 20px;
+        width: 300px !important;
+        min-width: 300px !important;
+        margin-bottom: 0;
     }
 
     .marquee-mask {
-        display: none;
+        display: block;
+        width: 60px;
     }
     
     .marquee-track {
-        flex-direction: column;
+        flex-direction: row;
         gap: 20px;
-        padding: 0 20px;
-        width: 100% !important;
-        animation: none !important;
+        padding: 16px 0;
+        width: max-content !important;
+        animation: marquee linear infinite !important;
+    }
+    
+    .marquee-row-1 .marquee-track {
+        animation-duration: 30s !important;
+    }
+    
+    .marquee-row-2 .marquee-track {
+        animation-duration: 35s !important;
+        animation-direction: reverse !important;
     }
 
     /* Trust Strip Fix */
