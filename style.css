@@ -2107,8 +2107,108 @@ footer {
     font-weight: 700;
 }
 
-@media (max-width: 480px) {
-    .modal-content {
-        padding: 32px 24px;
+/* ==========================================
+   Comprehensive Mobile Fixes
+   ========================================== */
+
+/* Prevent horizontal overflow on mobile */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+@media (max-width: 992px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .footer-links {
+        text-align: center;
     }
 }
+
+@media (max-width: 768px) {
+    /* Section paddings */
+    section {
+        padding: 4rem 20px !important;
+    }
+    
+    .services-intro h2 {
+        font-size: 2.2rem;
+    }
+    
+    .proper-services-grid {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+    
+    .luxury-service-card {
+        padding: 2rem 1.5rem;
+    }
+
+    /* Testimonials Fix */
+    .testimonials-header h2 {
+        font-size: 2rem !important;
+    }
+    
+    .testimonial-card {
+        width: 100% !important;
+        min-width: unset !important;
+        margin-bottom: 20px;
+    }
+    
+    .testimonials-track {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    /* Trust Strip Fix */
+    .trust-strip {
+        flex-direction: column;
+        gap: 12px;
+        padding: 30px 20px;
+    }
+    
+    .trust-dot {
+        display: none;
+    }
+    
+    .trust-item {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    /* Final CTA Fix */
+    .cta-headline {
+        font-size: 2rem !important;
+        margin-bottom: 2.5rem;
+    }
+    
+    .btn-whatsapp-cta, .btn-call-cta {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Modal padding */
+    .modal-content {
+        padding: 32px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-main-title {
+        font-size: 30px !important;
+    }
+    
+    .infra-title {
+        font-size: 28px !important;
+    }
+    
+    .logo-text {
+        font-size: 18px;
+    }
+}
+
