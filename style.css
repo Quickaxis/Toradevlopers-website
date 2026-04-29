@@ -2356,3 +2356,197 @@ html, body {
         font-size: 12px;
     }
 }
+
+/* Subsections Styling */
+.subsection-label {
+    text-align: left;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #1B4D3E;
+    font-weight: 700;
+}
+
+.subsection-accent {
+    width: 40px;
+    height: 3px;
+    background-color: #C8972B;
+    margin-top: 8px;
+    margin-bottom: 32px;
+}
+
+.subsection-divider {
+    border-top: 1px solid #e0ddd5;
+    margin: 60px 0 48px 0;
+}
+
+/* Carousel Styling */
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    gap: 24px;
+    padding: 8px 4px 24px;
+    scrollbar-width: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    color: #1B4D3E;
+}
+
+.carousel-arrow.left-arrow {
+    left: 0px;
+}
+
+.carousel-arrow.right-arrow {
+    right: 0px;
+}
+
+.carousel-arrow svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Flat/Apartment Cards */
+.prop-card {
+    width: 320px;
+    flex-shrink: 0;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+    overflow: hidden;
+    border: 1px solid #e8e4dc;
+}
+
+.prop-card-img {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.flats-gradient {
+    background: linear-gradient(135deg, #1B4D3E 0%, #2d6b58 100%);
+}
+
+.apartments-gradient {
+    background: linear-gradient(135deg, #2d3a2e 0%, #1B4D3E 100%);
+}
+
+.prop-watermark {
+    font-family: 'Playfair Display', serif;
+    font-size: 80px;
+    color: rgba(255,255,255,0.08);
+}
+
+.prop-badge {
+    background: #C8972B;
+    color: white;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 3px;
+    position: absolute;
+    top: 14px;
+    left: 14px;
+}
+
+.prop-card-content {
+    padding: 20px 20px 24px;
+}
+
+.prop-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1B4D3E;
+    margin-bottom: 6px;
+}
+
+.prop-location {
+    font-size: 11px;
+    color: #5a7265;
+    margin-bottom: 14px;
+}
+
+.prop-tags-row {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.prop-tag {
+    background: rgba(27,77,62,0.08);
+    color: #1B4D3E;
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.prop-divider {
+    border-top: 1px solid #eee;
+    margin: 14px 0;
+}
+
+.prop-coming-soon {
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    color: #C8972B;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.btn-prop-cta {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: #1B4D3E;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 14px;
+    text-decoration: none;
+}
+
+/* Mobile Adjustments for Subsections and Carousels */
+@media (max-width: 768px) {
+    .prop-card {
+        width: 280px;
+    }
+    
+    .carousel-arrow {
+        display: none;
+    }
+    
+    .subsection-label {
+        font-size: 22px;
+    }
+}
