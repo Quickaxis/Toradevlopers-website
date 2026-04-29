@@ -935,18 +935,21 @@ footer {
 }
 
 .p-total-area {
-    font-size: 11px;
-    color: #999;
-    margin-top: 6px;
-    margin-bottom: 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1B4D3E;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    letter-spacing: 0.3px;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 6px;
 }
 
 .p-total-area span {
     color: #C8972B;
     font-size: 14px;
+    font-weight: 700;
 }
 
 .p-card-footer {
