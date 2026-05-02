@@ -333,6 +333,253 @@ h1, h2, h3, h4, .serif {
     to { opacity: 1; transform: translateX(0); }
 }
 
+/* 3D Architectural Illustration Scene */
+.hero-3d-scene {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 48%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.scene-container {
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 520px;
+    height: 480px;
+    perspective: 1200px;
+    animation: floatScene 5s ease-in-out infinite;
+}
+
+@keyframes floatScene {
+    0%, 100% { transform: translateY(-50%) translateY(0px); }
+    50% { transform: translateY(-50%) translateY(-12px); }
+}
+
+.isometric-group {
+    transform: rotateX(55deg) rotateZ(45deg);
+    transform-style: preserve-3d;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* 1. Ground Grid */
+.ground-grid {
+    width: 400px;
+    height: 400px;
+    background-image: 
+        repeating-linear-gradient(rgba(255,255,255,0.06) 0px, rgba(255,255,255,0.06) 1px, transparent 1px, transparent 50px),
+        repeating-linear-gradient(90deg, rgba(255,255,255,0.06) 0px, rgba(255,255,255,0.06) 1px, transparent 1px, transparent 50px);
+    background-color: rgba(27,77,62,0.6);
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+/* 2. Plot Parcels */
+.plot {
+    position: absolute;
+}
+.plot-1 { width: 80px; height: 60px; background: rgba(200,151,43,0.35); border: 1px solid rgba(200,151,43,0.6); top: 80px; left: 80px; }
+.plot-2 { width: 80px; height: 60px; background: rgba(200,151,43,0.2); border: 1px solid rgba(200,151,43,0.4); top: 80px; left: 170px; }
+.plot-3 { width: 80px; height: 60px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); top: 80px; left: 260px; }
+.plot-4 { width: 80px; height: 60px; background: rgba(200,151,43,0.25); border: 1px solid rgba(200,151,43,0.5); top: 150px; left: 80px; }
+.plot-5 { width: 80px; height: 60px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); top: 150px; left: 170px; }
+.plot-6 { width: 80px; height: 60px; background: rgba(200,151,43,0.15); border: 1px solid rgba(200,151,43,0.3); top: 150px; left: 260px; }
+
+/* 3. Road Lines */
+.road {
+    position: absolute;
+    background: rgba(255,255,255,0.12);
+}
+.road-h { top: 143px; left: 70px; width: 280px; height: 4px; }
+.road-v1 { top: 70px; left: 163px; width: 4px; height: 160px; }
+.road-v2 { top: 70px; left: 253px; width: 4px; height: 160px; }
+
+/* 4, 5, 6 Buildings Common */
+.building {
+    position: absolute;
+    transform-style: preserve-3d;
+}
+.building .face {
+    position: absolute;
+}
+
+/* Building 1 - Tall Residential */
+.building-1 {
+    top: 60px;
+    left: 60px;
+    width: 70px;
+    height: 70px;
+}
+.building-1 .front {
+    width: 70px;
+    height: 100px;
+    background: #1B4D3E;
+    border: 1px solid rgba(200,151,43,0.4);
+    transform: translateZ(100px);
+}
+.building-1 .right {
+    width: 40px;
+    height: 100px;
+    background: #164030;
+    border: 1px solid rgba(200,151,43,0.2);
+    transform: rotateY(-90deg) translateZ(-40px) translateY(0);
+}
+.building-1 .top {
+    width: 70px;
+    height: 40px;
+    background: #C8972B;
+    opacity: 0.7;
+    transform: rotateX(90deg) translateZ(-100px);
+}
+
+/* Windows Grid for Buildings */
+.window-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    padding: 12px;
+}
+.window {
+    width: 8px;
+    height: 10px;
+    background: rgba(200,151,43,0.5);
+}
+
+/* Building 2 - Shorter Wider */
+.building-2 {
+    top: 80px;
+    left: 200px;
+    width: 80px;
+    height: 80px;
+}
+.building-2 .front {
+    width: 80px;
+    height: 65px;
+    background: #1e5545;
+    transform: translateZ(65px);
+}
+.building-2 .right {
+    width: 35px;
+    height: 65px;
+    background: #174038;
+    transform: rotateY(-90deg) translateZ(-35px) translateY(0);
+}
+.building-2 .top {
+    width: 80px;
+    height: 35px;
+    background: rgba(200,151,43,0.5);
+    transform: rotateX(90deg) translateZ(-65px);
+}
+
+/* Building 3 - Small House */
+.building-3 {
+    top: 100px;
+    left: 300px;
+    width: 55px;
+    height: 55px;
+}
+.building-3 .front {
+    width: 55px;
+    height: 50px;
+    background: #1B4D3E;
+    transform: translateZ(50px);
+}
+.building-3 .right {
+    width: 30px;
+    height: 50px;
+    background: #164030;
+    transform: rotateY(-90deg) translateZ(-30px) translateY(0);
+}
+.building-3 .top {
+    width: 55px;
+    height: 30px;
+    background: rgba(200,151,43,0.6);
+    transform: rotateX(90deg) translateZ(-50px);
+}
+.building-3 .roof {
+    position: absolute;
+    width: 55px;
+    height: 30px;
+    background: #C8972B;
+    opacity: 0.8;
+    clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+    transform: translateZ(50px) rotateX(-90deg) translateY(-15px) translateZ(15px); /* Position on top */
+}
+
+/* 7. Street Lights */
+.light {
+    position: absolute;
+    width: 2px;
+    height: 35px;
+    background: rgba(255,255,255,0.4);
+    transform-style: preserve-3d;
+    transform: rotateX(-90deg) translateZ(17.5px); /* Vertical stand */
+}
+.light .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #C8972B;
+    position: absolute;
+    top: -3px;
+    left: -2px;
+    box-shadow: 0 0 10px #C8972B;
+}
+.light-1 { top: 140px; left: 155px; }
+.light-2 { top: 140px; left: 245px; }
+.light-3 { top: 140px; left: 340px; }
+
+/* 8. Boundary Wall */
+.boundary-wall {
+    position: absolute;
+    inset: 60px;
+    border: 2px solid rgba(200,151,43,0.2);
+    pointer-events: none;
+}
+
+/* Floating Labels */
+.scene-label {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 11px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    z-index: 20;
+}
+.label-line {
+    width: 20px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+    display: inline-block;
+    margin-right: 8px;
+}
+.label-1 { top: 25%; right: 6%; }
+.label-2 { top: 45%; right: 3%; }
+.label-3 { top: 60%; right: 8%; }
+.label-3.gold { color: var(--warm-gold); border-color: rgba(200, 151, 43, 0.4); }
+
+/* Hide on Mobile */
+@media (max-width: 768px) {
+    .hero-3d-scene {
+        display: none;
+    }
+}
+
 /* Mobile Navigation Styles */
 .menu-toggle {
     display: none;
